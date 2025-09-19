@@ -11,3 +11,8 @@ export type Blog = {
   created_by: string;
   created_at: string;
 };
+
+export type ImageCardProps = {
+  image: string;
+  imageDesc: string;
+};

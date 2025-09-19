@@ -4,6 +4,8 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { fetchLatestBlogs } from '@/hooks/fetch-blogs';
 import { BlogCard } from '@/components/blocks/blog-card';
+import { ImageCard } from '@/components/blocks/image-card';
+import { photos } from '@/lib/photos';
 import type { Blog } from '@/types/general';
 
 const Landing: React.FC = async () => {
@@ -67,6 +69,25 @@ const Landing: React.FC = async () => {
       </section>
       <section className="w-full flex flex-col gap-md">
         <h2>Photos</h2>
+        <div
+          className="w-full columns-2 md:columns-3 lg:columns-4 gap-md space-y-4
+          "
+        >
+          {photos.map((photo, index) => {
+            const rotation = ((index * 26) % 20) - 10;
+            return (
+              <div
+                key={index}
+                className="mb-4 break-inside-avoid transition-transform duration-300"
+                style={{
+                  transform: `rotate(${rotation}deg)`,
+                }}
+              >
+                <ImageCard image={photo.src} imageDesc={photo.alt} />
+              </div>
+            );
+          })}
+        </div>
       </section>
       <section className="w-full flex flex-col gap-md">
         <h2>My Blog</h2>
