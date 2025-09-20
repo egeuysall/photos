@@ -67,7 +67,7 @@ const Landing: React.FC = async () => {
           </div>
         </div>
       </section>
-      <section className="w-full flex flex-col gap-md">
+      <section className="w-full flex flex-col gap-md" id="work">
         <h2>Photos</h2>
         <div
           className="w-full columns-2 md:columns-3 lg:columns-4 gap-md space-y-4
