@@ -42,20 +42,12 @@ export const Footer: React.FC = () => {
   // TODO: Fill these
   const resourceLinks: ResourceLink[] = [
     {
-      title: '',
-      href: '',
+      title: 'Links',
+      href: 'https://www.link.egeuysal.com/',
     },
     {
-      title: '',
-      href: '',
-    },
-    {
-      title: '',
-      href: '',
-    },
-    {
-      title: '',
-      href: '',
+      title: 'Blog',
+      href: 'https://www.blog.egeuysal.com/',
     },
   ];
 
