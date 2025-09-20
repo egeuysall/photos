@@ -11,7 +11,6 @@ import { inter, dmSans, jetbrainsMono } from '@/lib/fonts';
 
 // Internal Components
 import { Footer } from '@/components/blocks/footer';
-import { Header } from '@/components/blocks/header';
 import { LayoutWrapper } from '@/components/seo/layout-wrapper';
 
 // SEO details
@@ -23,85 +22,98 @@ import { getProduct } from '@/lib/site-details';
  */
 
 // TODO: Fill these
-export const name = '';
+export const name = 'Ege Uysal Photography: Innovate. Optimize. Create.';
 
 /**
  * The main image URL for the site or application.
  * @type {string}
  */
-export const image = '';
+export const image = '/banner.png';
 
 /**
  * A brief description of the site or application.
  * @type {string}
  */
-export const description = '';
+export const description =
+  'Explore the photography portfolio of Ege Uysal, showcasing minimalist and creative photo collections that capture unique moments with clarity and style.';
 
 /**
  * The template string for dynamic page titles or metadata.
  * @type {string}
  */
-const template = '';
+const template = 'Ege Uysal Photography';
 
 /**
  * The base URL of the site.
  * @type {string}
  */
-const siteUrl = 'http://w.co';
+const siteUrl = 'http://www.photos.egeuysal.com';
 
 /**
  * The name of the site's author.
  * @type {string}
  */
-const authorName = '';
+const authorName = 'Ege Uysal';
 
 /**
  * An array of keywords relevant to the site for SEO purposes.
  * @type {string[]}
  */
-const keywords: string[] = [];
+
+const keywords: string[] = [
+  'Ege Uysal',
+  'photography portfolio',
+  'minimalist photography',
+  'creative photography',
+  'photo collections',
+  'fine art photography',
+  'photography showcase',
+  'photography website',
+  'digital photography',
+  'modern photography',
+];
 
 /**
  * A description of the main image for accessibility and SEO.
  * @type {string}
  */
-const imageDescription = '';
+const imageDescription = 'Photos image';
 
 /**
  * The Twitter handle of the author (e.g., '@username').
  * @type {string}
  */
-const authorTwitter = '';
+const authorTwitter = 'egecreates';
 
 /**
  * The LinkedIn profile URL of the author.
  * @type {string}
  */
-const authorLinkedin = '';
+const authorLinkedin = 'egeuysall';
 
 /**
  * The path or URL to the ICO favicon.
  * @type {string}
  */
-const icoIcon = '';
+const icoIcon = 'icon.ico';
 
 /**
  * The path or URL to the PNG favicon.
  * @type {string}
  */
-const pngIcon = '';
+const pngIcon = 'icon.png';
 
 /**
  * The path or URL to the Apple touch icon.
  * @type {string}
  */
-const appleTouchIcon = '';
+const appleTouchIcon = 'apple-touch-icon.png';
 
 /**
  * The path or URL to the web app manifest file.
  * @type {string}
  */
-const manifestFile = '';
+const manifestFile = 'manifest.json';
 
 export async function generateMetadata(): Promise<Metadata> {
   // Fetch data needed for metadata
@@ -246,9 +258,7 @@ export default async function RootLayout({ children }: { children: React.ReactNo
       <body className="w-full h-full flex-center">
         <LayoutWrapper jsonLdData={jsonLd}>
           <main className="w-[90vw] md:w-[92.5vw] lg:w-[95vw]">
-            <div className="mb-24">
-              <Header />
-            </div>
+            <div className="mb-10" />
             <Analytics />
             {children}
             <SpeedInsights />
