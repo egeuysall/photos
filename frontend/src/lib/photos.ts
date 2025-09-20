@@ -64,5 +64,4 @@ export const photos: Photo[] = [
   { src: '/images/img-61.jpg', alt: 'Photo 61' },
   { src: '/images/img-62.jpg', alt: 'Photo 62' },
   { src: '/images/img-63.jpg', alt: 'Photo 63' },
-  { src: '/images/img-64.jpg', alt: 'Photo 64' },
 ];
