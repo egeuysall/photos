@@ -27,8 +27,8 @@ export const Footer: React.FC = () => {
 
   // TODO: Fill these
   const companyInfo = {
-    name: '',
-    slogan: '',
+    name: 'Photos',
+    slogan: 'Explore. Frame. Remember.',
   };
 
   /**
@@ -85,9 +85,9 @@ export const Footer: React.FC = () => {
   ];
 
   return (
-    <footer className="w-full border border-neutral-300 dark:border-neutral-700 rounded-md py-lg px-md mt-auto">
+    <footer className="py-lg px-md mt-auto w-full rounded-md border border-neutral-300 dark:border-neutral-700">
       <div className="container mx-auto">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-2xl">
+        <div className="gap-2xl grid grid-cols-1 md:grid-cols-3">
           <div className="flex flex-col">
             <h6>{companyInfo.name}</h6>
             <p className="text-small mt-2xs">{companyInfo.slogan}</p>
@@ -114,7 +114,7 @@ export const Footer: React.FC = () => {
           <div>
             <h6 className="mb-md">Connect</h6>
             <address className="not-italic">
-              <div className="flex items-center gap-xs">
+              <div className="gap-xs flex items-center">
                 {socialLinks.map((link, index) => (
                   <Link
                     key={`social-${index}`}
@@ -122,7 +122,7 @@ export const Footer: React.FC = () => {
                     target="_blank"
                     rel="noopener noreferrer"
                     aria-label={link.ariaLabel}
-                    className="text-neutral-900 dark:text-neutral-100 hover:text-primary-700 dark:hover:text-primary-500 transition-colors duration-200"
+                    className="hover:text-primary-700 dark:hover:text-primary-500 text-neutral-900 transition-colors duration-200 dark:text-neutral-100"
                   >
                     <link.icon size={link.size} strokeWidth={1.75} />
                   </Link>
