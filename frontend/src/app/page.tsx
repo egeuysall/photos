@@ -8,11 +8,11 @@ import { ImageCard } from '@/components/blocks/image-card';
 import { getCachedCloudinaryPhotos } from '@/lib/get-cloudinary-photos';
 import type { Blog, Photo } from '@/types/general';
 
-export const revalidate = 3600; // Revalidate every hour
+export const revalidate = 3600;
 
 const Landing: React.FC = async () => {
   const blogs = await fetchLatestBlogs();
-  const photos: Photo[] = await getCachedCloudinaryPhotos('photos');
+  const photos: Photo[] = await getCachedCloudinaryPhotos();
 
   return (
     <main className="flex flex-col gap-18">
